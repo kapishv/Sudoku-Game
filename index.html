@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sudoku Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <table id="main">
+        <tr>
+          <td id="grid">
+            <b id="head">Sudoku</b><br /><br />
+            <table class="out">
+              <tr>
+                <td class="box">
+                  <table class="in">
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="0" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="1" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="2" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="9" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="10" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="11" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="18" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="19" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="20" />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+
+                <td class="box">
+                  <table class="in">
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="3" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="4" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="5" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="12" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="13" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="14" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="21" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="22" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="23" />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+
+                <td class="box">
+                  <table class="in">
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="6" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="7" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="8" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="15" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="16" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="17" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="24" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="25" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="26" />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="box">
+                  <table class="in">
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="27" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="28" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="29" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="36" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="37" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="38" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="45" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="46" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="47" />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+
+                <td class="box">
+                  <table class="in">
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="30" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="31" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="32" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="39" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="40" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="41" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="48" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="49" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="50" />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+
+                <td class="box">
+                  <table class="in">
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="33" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="34" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="35" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="42" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="43" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="44" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="51" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="52" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="53" />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="box">
+                  <table class="in">
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="54" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="55" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="56" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="63" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="64" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="65" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="72" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="73" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="74" />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+
+                <td class="box">
+                  <table class="in">
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="57" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="58" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="59" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="66" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="67" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="68" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="75" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="76" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="77" />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+
+                <td class="box">
+                  <table class="in">
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="60" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="61" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="62" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="69" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="70" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="71" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="cell" readonly id="78" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="79" />
+                      </td>
+                      <td>
+                        <input type="text" class="cell" readonly id="80" />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+
+          <td id="buttons">
+            <br /><b id="menu">Menu</b><br /><br />
+            <form>
+              <table id="mtable">
+                <tr>
+                  <td colspan="3" id="life" style="font-size: 20px">
+                    Life Remaining:
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    <input
+                      type="button"
+                      id="newGame"
+                      class="mb"
+                      value="New Game"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    <input
+                      type="button"
+                      id="hint"
+                      class="mb"
+                      value="Hint (5)"
+                      name="5"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    <input
+                      type="button"
+                      id="submit"
+                      class="mb"
+                      value="Submit"
+                    /><br /><br />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="button" id="num1" class="nb" value="1" />
+                  </td>
+                  <td>
+                    <input type="button" id="num2" class="nb" value="2" />
+                  </td>
+                  <td>
+                    <input type="button" id="num3" class="nb" value="3" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="button" id="num4" class="nb" value="4" />
+                  </td>
+                  <td>
+                    <input type="button" id="num5" class="nb" value="5" />
+                  </td>
+                  <td>
+                    <input type="button" id="num6" class="nb" value="6" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="button" id="num7" class="nb" value="7" />
+                  </td>
+                  <td>
+                    <input type="button" id="num8" class="nb" value="8" />
+                  </td>
+                  <td>
+                    <input type="button" id="num9" class="nb" value="9" />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    <input
+                      type="button"
+                      id="clear"
+                      class="nb"
+                      value="&larr;"
+                      name=""
+                    />
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="diagBoxOut">
+      <div id="diagBoxIn">
+        <div id="diagBox">
+          <br />
+          Select the level of Difficulty:<br />
+          <input type="radio" name="diffLevel" id="l1" checked />
+          <label for="l1">Easy</label><br />
+          <input type="radio" name="diffLevel" id="l2" />
+          <label for="l2">Medium</label><br />
+          <input type="radio" name="diffLevel" id="l3" />
+          <label for="l3">Hard</label><br /><br />
+          <input type="button" value="Play" id="play" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
